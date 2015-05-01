@@ -133,7 +133,8 @@ console.log('Op code @', position, ':', mb.assembly[op]); //instruction
 
 //If you want to encode an instruction, use encode:
 console.log('Halt @', position, 'is', mb.encode(mb.opc.halt, position));
-console.log('Char code of halt @', position, 'is', mb.encodeInt(mb.opc.halt, position));
+console.log('Char code of halt @', position, 'is',
+  mb.encodeInt(mb.opc.halt, position));
 
 /*
 Opcodes in Malbolge:
