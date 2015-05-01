@@ -1,7 +1,7 @@
 {
   "name": "malbolge-vm",
   "homepage": "https://github.com/zb3/malbolge-vm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Malbolge virtual machine and interpreter",
   "keywords": [
     "malbolge",
