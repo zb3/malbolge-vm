@@ -48,7 +48,8 @@ try {
   //exec function executes the VM and returns the output
   result = mb.exec(vm);
 } catch (e) {
-  //When it fails, it will throw an error message or WANTS_INPUT if it would wait for user input
+  //When it fails, it will throw an error message
+  //or WANTS_INPUT if it would wait for user input
   if (e === mb.WANTS_INPUT)
     console.log('Error: User input expected.');
   else
@@ -82,9 +83,11 @@ while (true) {
     }
     break;
   } catch (e) {
-    //step throws WANTS_INPUT when it encounters input instruction and no input is provided
+    //step throws WANTS_INPUT when it encounters input instruction
+    //and no input is provided
     if (e === mb.WANTS_INPUT) {
-      //step function optionally accepts user input - a number, use 10 for new line and 59048 for EOF
+      //step function optionally accepts user input - a number
+      //use 10 for new line and 59048 for EOF
       mb.step(vm, 51); //assume user wanted to press '3'
       continue;
     }
@@ -124,7 +127,8 @@ console.log('Decoded op @', position, ':', op);
 op = mb.decodeInt(code.charCodeAt(position), position);
 console.log('Decoded op @', position, ':', op);
 
-//When you have a char of the normalized code, you can get the op code via assembly dictionary
+//When you have a char of the normalized code,
+//you can get the op code via assembly dictionary
 console.log('Op code @', position, ':', mb.assembly[op]); //instruction 
 
 //If you want to encode an instruction, use encode:
