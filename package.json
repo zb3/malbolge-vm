@@ -1,0 +1,25 @@
+{
+  "name": "malbolge-vm",
+  "homepage": "https://github.com/zb3/malbolge-vm",
+  "version": "1.0.0",
+  "description": "Malbolge virtual machine and interpreter",
+  "keywords": [
+    "malbolge",
+    "interpreter",
+    "esoteric"
+  ],
+  "main": "vm.js",
+  "bin": {
+    "malbolge-interpreter": "interpreter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zb3/malbolge-vm.git"
+  },
+  "bugs": "https://github.com/zb3/malbolge-vm/issues",
+  "author": {
+    "name": "zb3",
+    "email": "sgv@o2.pl",
+    "url": "https://github.com/zb3"
+  }
+}
