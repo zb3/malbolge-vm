@@ -72,7 +72,9 @@ function step(vm, input) {
   var vd = vm.d;
   var vmd = vm.mem[vm.d];
 
-  switch (xlat1[(vm.mem[vc] - 33 + vc) % 94]) {
+  var opcode = xlat1[(vm.mem[vc] - 33 + vc) % 94];
+
+  switch (opcode) {
     case 'j':
       vm.d = vmd;
       break;
@@ -104,7 +106,7 @@ function step(vm, input) {
     vm.c = vc;
     vm.d = vd;
     vm.mem[vd] = vmd;
-    throw 'Illegal jump!';
+    throw 'Illegal ' + (opcode === 'i' ? 'jump' : 'write') + '!';
   }
 
   vm.mem[vm.c] = xlat2.charCodeAt(vm.mem[vm.c] - 33);
